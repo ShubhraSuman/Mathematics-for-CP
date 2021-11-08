@@ -1,0 +1,66 @@
+1) cout<<7/2<<endl;
+O/P: 3
+Since both the digits are in integer so result is in integer.
+
+2) cout<<7/2.0<<endl;
+O/P: 3.5
+Since digit is in float so result will be in float.
+
+3) cout<<'c'+1;
+O/P: 100
+
+So calculation always happens with higher datatype.
+
+ /\
+ ||
+I|| Double
+N|| Float
+C|| Long long Int
+E|| Long Int
+A|| Int
+S|| Characters
+I||
+N||
+G||
+
+# Operator percedence:
+++, -- have highest priority.
+
+# Ranges of datatype:
+1) -10^9 < int < 10^9
+2) -10^12 < long int < 10^12
+3) -10^18 < long long int < 10^18
+
+# What is overfllow:
+int main()
+{
+int a = 100000;
+int b = 100000;
+int c = a*b;
+cout<<c<<endl;
+}
+O/P: 1410065408 (Garbage value) 
+
+# INT_MAX gives value of maximum integer.
+
+# INT_MIN < int < INT_MAX
+when cout<<INT_MAX+1;
+O/P: -2147483648 (INT_MIN)
+
+# int main()
+ {
+    int a = 100000;
+    int b = 100000;
+    long int c = a*b;
+    cout<<c<<endl;
+ }
+ O/P: It will not give correct output since the multiplication is happening in int not in long int.
+ To get correct O/P
+ int main()
+ {
+    int a = 100000;
+    int b = 100000;
+    long int c = a*1LL*b; (It will now treat multiplication in long int)
+    cout<<c<<endl;
+ }
+ # Try not to use double and float in calculation because they can store number of wide range but precision can be wrong.
