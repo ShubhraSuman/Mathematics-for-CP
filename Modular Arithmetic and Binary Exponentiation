@@ -1,0 +1,32 @@
+# Formula of Modular Arithmetic:
+1) ( a + b ) % M = ( ( a % M ) + ( b % M ) ) % M
+2) ( a * b ) % M =  ( ( a % M ) * ( b % M ) ) % M
+3) ( a - b ) % M = ( ( a % M ) - ( b % M ) + M ) % M
+4) ( a / b ) % M = ( ( a % M ) * ( b ^ (-1) ) % M ) % M
+
+# We cannot store very large number thats y we use modulo operator.
+
+#Binary Exponentiation:
+1) Power function returns double which is not precise.
+
+#Calculating power in O(log n):
+
+1) Even power:
+
+2^16 = 2^8 * 2^8
+2^8 = 2^4 * 2^4
+2^4 = 2^2 * 2^2
+2^2 = 2^1 * 2^1
+
+2) Odd power:
+3^13 = 3* 3^12
+3^12 = 3^6 * 3^6
+3^6 = 3^3 * 3^3
+3^3 = 3 * 3^2
+3^2 = 3 * 3
+
+1) f(a,b) ----------> f(a,b/2) * f(a,b/2)
+           b is even
+2) f(a,b) -----------> a * f(a,b/2) * f(a,b/2)
+           b is odd
+           
